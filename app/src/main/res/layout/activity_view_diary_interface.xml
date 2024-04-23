@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="#1D2896"
+    tools:context="com.example.githmidiaryapp.View_diary_interface">
+
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/yellowtail"
+        android:text="My Diaries"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/resent_text_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_gravity="left"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="@font/archivo"
+        android:text="Resent"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints" />
+
+    <ListView
+        android:id="@+id/listview_id"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="20dp"
+        android:scrollbars="vertical"
+        tools:listitem="@layout/diary_list" />
+
+    <Button
+        android:id="@+id/add_btn_id"
+        android:layout_width="65dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#8D9DCC"
+        android:elevation="10dp"
+        android:shadowColor="#DCDADA"
+        android:textStyle="bold"
+        app:icon="@drawable/plus"
+        app:iconGravity="top"
+        app:iconSize="55dp"
+        tools:ignore="MissingConstraints" />
+
+</LinearLayout>

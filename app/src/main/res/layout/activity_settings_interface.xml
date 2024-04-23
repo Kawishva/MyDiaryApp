@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1D2896"
+    tools:context="com.example.githmidiaryapp.Add_new_diary_interface">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/yellowtail"
+        android:text="Settings"
+        android:textColor="@color/white"
+        android:textSize="45dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/archivo"
+        android:text="Edit Name"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/enter_name_text_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="0dp"
+        android:fontFamily="@font/archivo"
+        android:maxLength="10"
+        android:maxLines="1"
+        android:paddingHorizontal="10dp"
+        android:hint="Githmi"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/name_save_btn_id"
+        android:layout_width="55dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#FFFFFF"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="5dp"
+        android:textSize="15dp"
+        app:icon="@drawable/done"
+        app:iconGravity="top"
+        app:iconSize="28dp"
+        app:iconTint="#010B43" />
+
+    <TextView
+        android:id="@+id/password_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/archivo"
+        android:text="Add a Password"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/enter_pswd_text_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="0dp"
+        android:fontFamily="@font/archivo"
+        android:maxLength="10"
+        android:maxLines="1"
+        android:paddingHorizontal="10dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/pswd_save_btn_id"
+        android:layout_width="55dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#FFFFFF"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="5dp"
+        android:textSize="15dp"
+        app:icon="@drawable/done"
+        app:iconGravity="top"
+        app:iconSize="28dp"
+        app:iconTint="#010B43" />
+
+    <ImageView
+        android:id="@+id/bottom_img_id"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/line"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/developed_name_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/archivo"
+        android:maxLines="2"
+        android:paddingHorizontal="100dp"
+        android:paddingVertical="10dp"
+        android:text="Developed By Githmi D/BCE/22/0001"
+        android:textAlignment="center"
+        android:textColor="#90FFFFFF"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints" />
+
+</LinearLayout>

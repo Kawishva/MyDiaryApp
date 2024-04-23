@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1D2896"
+    tools:context="com.example.githmidiaryapp.Main_menue_interface">
+
+    <TextView
+        android:id="@+id/welcome_text_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="60dp"
+        android:fontFamily="@font/archivo"
+        android:text="Welcome Githmi !"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        tools:ignore="MissingConstraints"/>
+
+    <ImageView
+        android:id="@+id/user_image_id"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="80dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pb1"
+        app:tint="@color/white" />
+
+    <Button
+        android:id="@+id/view_diary_btn_id"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#24225C"
+        android:text="View Diary"
+        app:icon="@drawable/eye"
+        android:textSize="20dp"
+        app:iconSize="40dp"
+        app:iconTint="#FFFFFF" />
+
+    <Button
+        android:id="@+id/add_entry_btn_id"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#24225C"
+        android:text="Add New Entry"
+        app:icon="@drawable/plus"
+        android:textSize="20dp"
+        app:iconSize="35dp"
+        app:iconTint="#FFFFFF" />
+
+    <Button
+        android:id="@+id/settings_btn_id"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#24225C"
+        android:text="Settings"
+        app:icon="@drawable/settings"
+        android:textSize="20dp"
+        app:iconSize="35dp"
+        app:iconTint="#FFFFFF" />
+
+    <ImageView
+        android:id="@+id/bottom_img_id"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginBottom="25dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/line"
+        app:tint="@color/white" />
+</LinearLayout>

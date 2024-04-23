@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1D2896"
+    tools:context="com.example.githmidiaryapp.Add_new_diary_interface">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="150dp"
+        android:layout_marginLeft="30dp"
+        android:fontFamily="@font/yellowtail"
+        android:text="New Diary"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/data_image_id"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="15dp"
+        android:clickable="true"
+        android:src="@drawable/pb1"
+        app:tint="@color/white" />
+
+    <EditText
+        android:id="@+id/enter_title_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="0dp"
+        android:fontFamily="@font/archivo"
+        android:maxLength="25"
+        android:maxLines="1"
+        android:paddingHorizontal="10dp"
+        android:paddingStart="20dp"
+        android:hint="Title"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/bottom_img_id"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginBottom="5dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/line"
+        app:tint="@color/white" />
+
+    <Button
+        android:id="@+id/date_btn_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="150dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#FFFFFF"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="3dp"
+        android:text="dd.mm.yyyy"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        app:icon="@android:drawable/ic_menu_today"
+        app:iconGravity="end"
+        app:iconSize="25dp"
+        app:iconTint="#000000" />
+
+    <EditText
+        android:id="@+id/diary_text_id"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/archivo"
+        android:gravity="top|left"
+        android:hint="Write More here...."
+        android:paddingHorizontal="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="17dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/data_add_btn_id"
+        android:layout_width="65dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="#8D9DCC"
+        android:elevation="10dp"
+        android:shadowColor="#8F5A5A5A"
+        android:textStyle="bold"
+        app:icon="@drawable/plus"
+        app:iconGravity="top"
+        app:iconSize="55dp"
+        tools:ignore="MissingConstraints" />
+
+</LinearLayout>
