@@ -13,6 +13,9 @@
         android:theme="@style/Theme.GithmiDiaryApp"
         tools:targetApi="31">
         <activity
+            android:name=".diarypage"
+            android:exported="false" />
+        <activity
             android:name=".Splash_screen_interface"
             android:exported="true">
             <intent-filter>
@@ -22,19 +25,19 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.githmidiaryapp.Login_interface"
+            android:name=".Login_interface"
             android:exported="false" />
         <activity
-            android:name="com.example.githmidiaryapp.Settings_interface"
+            android:name=".Settings_interface"
             android:exported="false" />
         <activity
-            android:name="com.example.githmidiaryapp.View_diary_interface"
+            android:name=".View_diary_interface"
             android:exported="false" />
         <activity
-            android:name="com.example.githmidiaryapp.Add_new_diary_interface"
+            android:name=".Add_new_diary_interface"
             android:exported="false" />
         <activity
-            android:name="com.example.githmidiaryapp.Main_menue_interface"
+            android:name=".Main_menue_interface"
             android:exported="false" />
     </application>
 

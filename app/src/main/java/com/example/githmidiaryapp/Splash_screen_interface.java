@@ -19,21 +19,21 @@ public class Splash_screen_interface extends AppCompatActivity {
         setContentView(R.layout.activity_splash_screen_interface);
 
         Handler handler = new Handler();
-        sharedPreferences = getSharedPreferences("USER_DATA",MODE_PRIVATE);
+        sharedPreferences = getSharedPreferences("USER_DATA", MODE_PRIVATE);
 
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                if(sharedPreferences.getString("User_password","").isEmpty()){
+                if (sharedPreferences.getString("User_password", "").isEmpty()) {
                     startActivity(new Intent(Splash_screen_interface.this, Main_menue_interface.class));
                     finish();
-                }else {
+                } else {
                     startActivity(new Intent(Splash_screen_interface.this, Login_interface.class));
                     finish();
                 }
             }
-        },2000);
-        //starts with splash screen "Welcome to my Diary" and waits for 4000 ms and then directed to main menue screen
+        }, 2000);
+        //starts with splash screen "Welcome to my Diary" and waits for 2000 ms and then directed to main menue screen
 
 
     }

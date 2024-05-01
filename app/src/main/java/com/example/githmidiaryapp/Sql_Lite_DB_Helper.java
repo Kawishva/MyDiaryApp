@@ -44,7 +44,7 @@ public class Sql_Lite_DB_Helper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public void add_diary_data( String title, String image, String date, String entry) {
+    public void add_diary_data(String title, String image, String date, String entry) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
 
@@ -58,35 +58,32 @@ public class Sql_Lite_DB_Helper extends SQLiteOpenHelper {
         if (result == -1) {
             Log.e("DB Error", "Failed to add diary entry"); // Log the error for debugging
         } else {
-            // Handle successful addition (consider using runOnUiThread for UI updates in background threads)
             Log.e("DB fine", " added diary entry"); // This might cause crash if on background thread
         }
     }
 
-    Cursor read_all_data(){
+    Cursor read_all_data() {
         String query = " SELECT * FROM " + TABLE_NAME;
         SQLiteDatabase db = this.getReadableDatabase();
 
         Cursor cursor = null;
-        if(db != null){
+        if (db != null) {
             cursor = db.rawQuery(query, null);
         }
         return cursor;
     }
 
-    void delete_selected_data(String selected_id){
+    void delete_selected_data(String selected_id) {
         SQLiteDatabase db = this.getWritableDatabase();
         long result = db.delete(TABLE_NAME, COLUMN_ID + "=?", new String[]{selected_id});
 
         if (result == -1) {
             Log.e("DB Error", "Failed to add diary entry"); // Log the error for debugging
         } else {
-            // Handle successful addition (consider using runOnUiThread for UI updates in background threads)
             Log.e("DB fine", "diary entry deleted"); // This might cause crash if on background thread
         }
 
     }
-
 
 
 }

@@ -29,9 +29,9 @@ import java.util.Date;
 
 public class Add_new_diary_interface extends AppCompatActivity {
 
-    EditText diary_text_id,enter_title_id;
+    EditText diary_text_id, enter_title_id;
     ImageView data_image_id;
-    Button date_btn_id,data_add_btn_id;
+    Button date_btn_id, data_add_btn_id;
     ActivityResultLauncher<Intent> resultLauncher;
 
 
@@ -68,11 +68,11 @@ public class Add_new_diary_interface extends AppCompatActivity {
                         new DatePickerDialog.OnDateSetListener() {
                             @Override
                             public void onDateSet(DatePicker view, int year, int month, int day) {
-                                month = month+1;
-                                String date =  day + "/" + month + "/" + year;
+                                month = month + 1;
+                                String date = day + "/" + month + "/" + year;
                                 date_btn_id.setText(date);
                             }
-                        },year,month,day);
+                        }, year, month, day);
                 datePickerDialog.show();
             }
         });
@@ -88,7 +88,7 @@ public class Add_new_diary_interface extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 add_data_to_db();
-                Toast.makeText(Add_new_diary_interface.this,"Diary saved..!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Add_new_diary_interface.this, "Diary saved..!", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(getApplicationContext(), Main_menue_interface.class);
                 startActivity(intent);
@@ -122,7 +122,7 @@ public class Add_new_diary_interface extends AppCompatActivity {
                 });
     }
 
-    void add_data_to_db(){
+    void add_data_to_db() {
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -147,7 +147,7 @@ public class Add_new_diary_interface extends AppCompatActivity {
         }).start();
     }
 
-    private void imagepicker(){
+    private void imagepicker() {
         Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         resultLauncher.launch(intent);
     }

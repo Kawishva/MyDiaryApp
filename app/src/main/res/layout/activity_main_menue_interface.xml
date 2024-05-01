@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:gravity="center"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1D2896"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context="com.example.githmidiaryapp.Main_menue_interface">
 
     <TextView
@@ -19,10 +19,10 @@
         android:fontFamily="@font/archivo"
         android:text="Welcome Githmi !"
         android:textAlignment="center"
+        android:textColor="@color/white"
         android:textSize="25dp"
         android:textStyle="bold"
-        android:textColor="@color/white"
-        tools:ignore="MissingConstraints"/>
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/user_image_id"
@@ -40,8 +40,8 @@
         android:layout_marginBottom="10dp"
         android:backgroundTint="#24225C"
         android:text="View Diary"
-        app:icon="@drawable/eye"
         android:textSize="20dp"
+        app:icon="@drawable/eye"
         app:iconSize="40dp"
         app:iconTint="#FFFFFF" />
 
@@ -52,8 +52,8 @@
         android:layout_marginBottom="10dp"
         android:backgroundTint="#24225C"
         android:text="Add New Entry"
-        app:icon="@drawable/plus"
         android:textSize="20dp"
+        app:icon="@drawable/plus"
         app:iconSize="35dp"
         app:iconTint="#FFFFFF" />
 
@@ -64,8 +64,8 @@
         android:layout_marginBottom="50dp"
         android:backgroundTint="#24225C"
         android:text="Settings"
-        app:icon="@drawable/settings"
         android:textSize="20dp"
+        app:icon="@drawable/settings"
         app:iconSize="35dp"
         app:iconTint="#FFFFFF" />
 

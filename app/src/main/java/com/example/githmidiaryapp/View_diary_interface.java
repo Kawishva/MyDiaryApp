@@ -21,16 +21,15 @@ import java.util.ArrayList;
 
 public class View_diary_interface extends AppCompatActivity {
 
-    Button add_btn_id;
-    ListView listview_id;
-    TextView resent_text_id;
-
-    Sql_Lite_DB_Helper db;
     static ArrayList<String> id_list;
     static ArrayList<String> title_list;
     static ArrayList<String> image_list;
     static ArrayList<String> date_list;
     static ArrayList<String> entry_list;
+    Button add_btn_id;
+    ListView listview_id;
+    TextView resent_text_id;
+    Sql_Lite_DB_Helper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,11 +83,46 @@ public class View_diary_interface extends AppCompatActivity {
                         }
                     });
                 } else {
-                   // Log.d("DB_DATA", "No data retrieved from the database");
+                    // Log.d("DB_DATA", "No data retrieved from the database");
                     resent_text_id.setText("No Diary Data...!");
                 }
             }
         }).start(); // Start the thread
+    }
+
+    void confirm_dialog(String diary_title, String diary_id) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(View_diary_interface.this);
+        builder.setTitle("Delete Diary Entry");
+        builder.setMessage("Are you want to delete\t" + diary_title + "?");
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int i) {
+                db.delete_selected_data(diary_id);
+                id_list.remove(diary_id);
+                title_list.remove(diary_id);
+                image_list.remove(diary_id);
+                date_list.remove(diary_id);
+                entry_list.remove(diary_id);
+
+                if (id_list.isEmpty()) {
+                    resent_text_id.setText("No Diary Data...!");
+                }
+                // Notify adapter about the change
+                ((MyAdapter) listview_id.getAdapter()).notifyDataSetChanged();
+            }
+        });
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+        builder.create().show();
+    }
+
+    private static class ViewHolder {
+        Button delete_btn_id;
+        TextView list_date_id, list_title_id, list_entry_id;
     }
 
     private class MyAdapter extends BaseAdapter {
@@ -135,47 +169,12 @@ public class View_diary_interface extends AppCompatActivity {
             holder.delete_btn_id.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    confirm_dialog(title_list.get(position),id_list.get(position));
+                    confirm_dialog(title_list.get(position), id_list.get(position));
 
                 }
             });
 
             return convertView;
         }
-    }
-
-    void confirm_dialog(String diary_title,String diary_id){
-        AlertDialog.Builder builder = new AlertDialog.Builder(View_diary_interface.this);
-        builder.setTitle("Delete Diary Entry");
-        builder.setMessage("Are you want to delete\t"+diary_title+"?");
-        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int i) {
-                db.delete_selected_data(diary_id);
-                    id_list.remove(diary_id);
-                    title_list.remove(diary_id);
-                    image_list.remove(diary_id);
-                    date_list.remove(diary_id);
-                    entry_list.remove(diary_id);
-
-                if(id_list.isEmpty()){
-                    resent_text_id.setText("No Diary Data...!");
-                }
-                // Notify adapter about the change
-                ((MyAdapter) listview_id.getAdapter()).notifyDataSetChanged();
-            }
-        });
-        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-
-            }
-        });
-        builder.create().show();
-    }
-
-    private static class ViewHolder {
-        Button delete_btn_id;
-        TextView list_date_id, list_title_id, list_entry_id;
     }
 }

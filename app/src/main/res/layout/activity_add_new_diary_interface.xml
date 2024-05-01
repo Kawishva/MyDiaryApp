@@ -3,21 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:gravity="center"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1D2896"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context="com.example.githmidiaryapp.Add_new_diary_interface">
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="20dp"
-        android:layout_marginRight="150dp"
         android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="150dp"
+        android:layout_marginBottom="20dp"
         android:fontFamily="@font/yellowtail"
         android:text="New Diary"
         android:textAlignment="center"
@@ -43,13 +43,13 @@
         android:layout_marginTop="5dp"
         android:layout_marginBottom="0dp"
         android:fontFamily="@font/archivo"
+        android:hint="Title"
         android:maxLength="25"
         android:maxLines="1"
         android:paddingHorizontal="10dp"
         android:paddingStart="20dp"
-        android:hint="Title"
-        android:textColorHint="@color/white"
         android:textColor="@color/white"
+        android:textColorHint="@color/white"
         android:textSize="25dp"
         android:textStyle="bold"
         tools:ignore="MissingConstraints" />
@@ -112,5 +112,7 @@
         app:iconGravity="top"
         app:iconSize="55dp"
         tools:ignore="MissingConstraints" />
+
+
 
 </LinearLayout>

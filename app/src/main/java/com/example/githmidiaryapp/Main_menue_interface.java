@@ -3,7 +3,6 @@ package com.example.githmidiaryapp;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,12 +16,11 @@ import java.util.Random;
 
 public class Main_menue_interface extends AppCompatActivity {
 
-    Button view_diary_btn_id,add_entry_btn_id,settings_btn_id;
+    static String welcome_text_user_name;
+    Button view_diary_btn_id, add_entry_btn_id, settings_btn_id;
     TextView welcome_text_id;
     ImageView user_image_id;
     SharedPreferences sharedPreferences;
-    static String welcome_text_user_name;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +34,7 @@ public class Main_menue_interface extends AppCompatActivity {
         welcome_text_id = findViewById(R.id.welcome_text_id);
         user_image_id = findViewById(R.id.user_image_id);
 
-        sharedPreferences = getSharedPreferences("USER_DATA",MODE_PRIVATE);
+        sharedPreferences = getSharedPreferences("USER_DATA", MODE_PRIVATE);
 
         change_user_name_and_title();
         random_image();
@@ -78,7 +76,7 @@ public class Main_menue_interface extends AppCompatActivity {
         change_user_name_and_title();
     }
 
-    void random_image(){
+    void random_image() {
 
         Random random = new Random();// Create an instance of Random class
 
@@ -89,12 +87,12 @@ public class Main_menue_interface extends AppCompatActivity {
         user_image_id.setImageResource(resourceId);// Set the drawable to the ImageView
     }
 
-    void change_user_name_and_title(){
-        welcome_text_user_name = sharedPreferences.getString("User_name","");
-        if(welcome_text_user_name.isEmpty()){
+    void change_user_name_and_title() {
+        welcome_text_user_name = sharedPreferences.getString("User_name", "");
+        if (welcome_text_user_name.isEmpty()) {
             welcome_text_id.setText("Welcome\t!");
-        }else {
-            welcome_text_id.setText("Welcome\t "+welcome_text_user_name+ " \t!");
+        } else {
+            welcome_text_id.setText("Welcome\t " + welcome_text_user_name + " \t!");
         }
     }
 }

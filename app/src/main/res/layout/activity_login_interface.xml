@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:gravity="center"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1D2896"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context="com.example.githmidiaryapp.Login_interface">
 
     <TextView
@@ -20,7 +20,7 @@
         android:text="Login"
         android:textColor="@color/white"
         android:textSize="50dp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/name_text"
@@ -44,12 +44,12 @@
         android:layout_marginTop="5dp"
         android:layout_marginBottom="0dp"
         android:fontFamily="@font/archivo"
+        android:hint="Enter here"
         android:maxLength="10"
         android:maxLines="1"
         android:paddingHorizontal="10dp"
-        android:hint="Enter here"
-        android:textColorHint="@color/white"
         android:textColor="@color/white"
+        android:textColorHint="@color/white"
         android:textSize="20dp"
         android:textStyle="bold"
         tools:ignore="MissingConstraints" />
