@@ -11,6 +11,7 @@ import androidx.annotation.Nullable;
 
 public class Sql_Lite_DB_Helper extends SQLiteOpenHelper {
 
+    // Database name and version number and columns
     private static final String DATABASE_NAME = "My_Diaries.db";
     private static final int DATABASE_VERSION = 1;
 
@@ -22,10 +23,12 @@ public class Sql_Lite_DB_Helper extends SQLiteOpenHelper {
     private static final String COLUMN_ENTRY = "_entry";
 
 
+    // Constructor
     public Sql_Lite_DB_Helper(@Nullable Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
+    // Creating table
     @Override
     public void onCreate(SQLiteDatabase db) {
         // Creating table in the DB
@@ -38,12 +41,15 @@ public class Sql_Lite_DB_Helper extends SQLiteOpenHelper {
         db.execSQL(query); // Executing create table query
     }
 
+    // Upgrading database
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL(" DROP TABLE IF EXISTS " + TABLE_NAME);
         onCreate(db);
     }
 
+
+    // Adding diary data
     public void add_diary_data(String title, String image, String date, String entry) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -62,6 +68,7 @@ public class Sql_Lite_DB_Helper extends SQLiteOpenHelper {
         }
     }
 
+    // Getting all diary data
     Cursor read_all_data() {
         String query = " SELECT * FROM " + TABLE_NAME;
         SQLiteDatabase db = this.getReadableDatabase();
@@ -73,6 +80,8 @@ public class Sql_Lite_DB_Helper extends SQLiteOpenHelper {
         return cursor;
     }
 
+
+    // Deleting diary data
     void delete_selected_data(String selected_id) {
         SQLiteDatabase db = this.getWritableDatabase();
         long result = db.delete(TABLE_NAME, COLUMN_ID + "=?", new String[]{selected_id});

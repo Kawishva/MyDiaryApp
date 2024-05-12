@@ -74,7 +74,9 @@ public class Main_menue_interface extends AppCompatActivity {
         super.onResume();
         // Update welcome text when activity resumes
         change_user_name_and_title();
+        random_image();
     }
+
 
     void random_image() {
 
